@@ -1,0 +1,17 @@
+# Node.js dependencies
+node_modules/
+
+# Local uploaded files
+uploads/
+
+# Local ExifTool binaries (system installation preferred)
+exiftool.exe
+exiftool_files/
+
+# Workspace & Agent configurations
+.agents/
+
+# Redundant / temporary test files
+test-upload.js
+exifr.full.umd.js
+*.exiftool.txt

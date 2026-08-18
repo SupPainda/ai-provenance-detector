@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Provenance Detector</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Provenance Detector</h1>
+    <p>Upload an image file to extract and download all metadata.</p>
+
+    <label class="file-label">
+      <span>Select image file</span>
+      <input id="fileInput" type="file" accept="image/*" />
+    </label>
+
+    <button id="extractButton" type="button" disabled>Analyze Provenance</button>
+    <button id="downloadButton" type="button" disabled>Download metadata</button>
+
+    <div id="status" class="status">No file selected.</div>
+    <div id="aiDetails" class="ai-details" style="display:none;"></div>
+    <pre id="metadataOutput" class="metadata-output"></pre>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

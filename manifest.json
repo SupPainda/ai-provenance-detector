@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "AI Provenance Detector",
+  "version": "1.0",
+  "description": "Upload an image and download all extracted metadata as JSON.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Provenance Detector"
+  },
+  "host_permissions": ["http://localhost:3000/*", "http://127.0.0.1:3000/*"]
+}

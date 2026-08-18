@@ -1,0 +1,205 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #090d16;
+  color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-width: 350px;
+  background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%);
+}
+
+.container {
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  margin: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h1 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.5;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 2px dashed #4f46e5;
+  padding: 12px;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-label:hover {
+  border-color: #818cf8;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.file-label span {
+  font-weight: 600;
+  color: #c7d2fe;
+  font-size: 0.88rem;
+}
+
+input[type="file"] {
+  width: 100%;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:disabled {
+  background: #1e293b;
+  color: #475569;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.7;
+}
+
+#extractButton {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+#extractButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+  filter: brightness(1.1);
+}
+
+#extractButton:not(:disabled):active {
+  transform: translateY(0);
+}
+
+#downloadButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+#downloadButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+  filter: brightness(1.1);
+}
+
+#downloadButton:not(:disabled):active {
+  transform: translateY(0);
+}
+
+.status {
+  margin: 8px 0 16px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.metadata-output {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px;
+  max-height: 280px;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* AI Detection Status */
+.status-high {
+  color: #fca5a5;
+  background: rgba(127, 29, 29, 0.4);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.status-medium {
+  color: #fcd34d;
+  background: rgba(120, 53, 4, 0.4);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+.status-low {
+  color: #6ee7b7;
+  background: rgba(6, 78, 59, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+}
+
+.ai-details {
+  margin: 12px 0;
+  padding: 12px 16px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ai-details ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+  color: #cbd5e1;
+}
+
+.ai-details li {
+  margin-bottom: 6px;
+}
+
+.stripped-note {
+  margin-top: 8px;
+  color: #fbbf24;
+  font-style: italic;
+  font-weight: 500;
+}
